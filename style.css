@@ -1,0 +1,228 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(descargar.gif) no-repeat center center/cover;
+    text-align: center; 
+    color: #eac6c6;
+}
+.container {
+    padding: 40px;
+    border-radius: 15px;
+    font-family:cursive ;
+}
+button {
+    background-color: #ffa9a9;
+    border:none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-family: monospace ;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+button:hover {
+    background-color: #ff8383;
+    transform: scale(1.1);
+}
+h1 {
+    margin-bottom: 30px;
+    font-size: 45px;
+    font-family: 'Press Start 2P', cursive;
+}
+p {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+/* Ventana principal */
+.ventana {
+    background: linear-gradient( rgba(255, 202, 202, 0.012),rgba(255, 195, 195, 0.656));
+    padding: 50px;
+    border-radius: 15px;
+    display: flex;
+    gap: 140px;
+    align-items: flex-start;
+    width: 1000px;
+    max-width: 95%;
+}
+
+/* Lado izquierdo */
+.texto {
+    width: 350px;
+}
+
+.cuadroTexto {
+    background: url("cuadro.jpg") no-repeat center center;
+    background-size: contain;   
+    width: 500px;
+    height: 500px;
+    position: relative;  
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+/* Lado derecho */
+.carpetas {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    row-gap: 80px;
+    column-gap: 80px;
+    margin-left: 60px;
+    color: #fbc3c3;
+}
+
+/* Folder estilo horizontal */
+.folder {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-decoration: none;
+    color: #fbc3c3;
+}
+
+.folder img {
+    width: 80px;
+}
+
+.folder span {
+    font-size: 14px;
+}
+
+/* efecto hover */
+.folder:hover {
+    transform: scale(1.05);
+}
+.zonaTexto {
+    position: absolute;
+
+    top: 159px;      /* baja el texto */
+    left: 80px;      /* separa del borde izquierdo */
+    right: 80px;     /* separa del borde derecho */
+    bottom: 80px;    /* separa de abajo */
+
+    overflow-y: auto;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #ffcdcd;
+}
+
+.tituloCarpetas {
+    text-align: center;
+    font-size: 25px;
+    font-family:"Gochi Hand", cursive;
+    font-weight: 650;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.carpetasContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 80px; /* mueve título y folders juntos */
+    margin-left: 40px;
+}
+
+.paginaMemorias {
+       min-height: 100vh;
+    display: block;   /* rompe el flex del body */
+    padding: 60px 0;
+}
+.contenedorMemorias {
+  background: linear-gradient( rgba(255, 202, 202, 0.012),rgba(255, 195, 195, 0.656));
+    padding: 50px;
+    border-radius: 20px;
+    width: 1000px;
+    max-width: 95%;
+    text-align: center;
+    margin: 0 auto;
+}
+.headerMemorias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+.arrow {
+    position: absolute;
+    left: 0;
+    position: relative;
+    top: 30px;
+}
+.arrow img {
+    width: 80px;
+    display: block;
+    cursor:pointer;
+    height: auto;
+    position: relative;
+    top: 3px;
+}
+.tituloMemorias {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 28px;
+    color: white;
+    position: relative;
+    top: 30px;
+}
+.subtexto {
+    grid-column: span 4;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin: 8px 0;
+    color: white;
+    text-align: center;
+}
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: auto;
+    column-gap: 50px;
+    row-gap: 1px;
+    justify-items: center;
+    width: fit-content;
+}
+.marco {
+    position: relative;
+    width:170px;
+    height: 170px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    
+}
+.marcoImg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.foto {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    width: 80%;
+    height: 71%;
+    object-fit: cover;
+    transform: translate(-50%,-50%);
+}
+.arrow img {
+    width: 60px;
+    transition: transform 0.2s ease;
+}
+
+.arrow img:hover {
+    transform: scale(1.15);
+}

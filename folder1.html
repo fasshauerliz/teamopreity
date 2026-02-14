@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>recuerdos</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body class="paginaMemorias">
+
+<div class="contenedorMemorias">
+
+    <!-- Flecha + título -->
+    <div class="headerMemorias">
+        <a href="segunda.html" class="arrow">
+            <img src="arrow.png" alt="volver">
+        </a>
+
+        <h1 class="tituloMemorias">ALGUNOS DE LOS MUCHOS MOMENTOS DONDE ME HICISTE FELIZ</h1>
+    </div>
+
+    <!-- Texto pequeño del centro -->
+
+    <!-- Galería -->
+    <div class="galeria">
+
+        <div class="marco">
+            <img src="plantillas.jpg" class="marcoImg">
+            <img src="foto1.jpg" class="foto">
+        </div>
+        <div class="marco">
+            <img src="plantillas.jpg" class="marcoImg">
+            <img src="foto2.jpg" class="foto">
+        </div>
+        <div class="marco">
+            <img src="plantillas.jpg" class="marcoImg">
+            <img src="foto3.jpg" class="foto">
+        </div>
+        <div class="marco">
+            <img src="plantillas.jpg" class="marcoImg">
+            <img src="foto4.jpg" class="foto">
+        </div>
+          <p class="subtexto" id="textoAnimado"> y aún me ponen muy feliz :3</p>
+        <div class="marco">
+            <img src="plantillas.jpg" class="marcoImg">
+            <img src="foto5.jpg" class="foto">
+        </div>
+        <div class="marco">
+            <img src="plantillas.jpg" class="marcoImg">
+            <img src="foto6.jpg" class="foto">
+        </div>
+        <div class="marco">
+            <img src="plantillas.jpg" class="marcoImg">
+            <img src="foto7.jpg" class="foto">
+        </div>
+        <div class="marco">
+            <img src="plantillas.jpg" class="marcoImg">
+            <img src="foto8.jpg" class="foto">
+        </div>
+
+        <!-- repite 8 veces cambiando fotoX.jpg -->
+        
+    </div>
+
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const elemento = document.getElementById("textoAnimado");
+    const texto = elemento.textContent;
+    elemento.textContent = "";
+
+    let i = 0;
+
+    const maquina = setInterval(() => {
+        elemento.textContent += texto[i];
+        i++;
+
+        if (i >= texto.length) {
+            clearInterval(maquina);
+        }
+    }, 70); // velocidad (más alto = más lento)
+});
+</script>
+</body>
+</html>
